@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>CAP Sahagún</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="css/heroic-features.css" rel="stylesheet">
+    <link href="vendor/fontawesome/css/all.min.css" rel="stylesheet">
+
+</head>
+
+<body>
+
+<!-- Navigation -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+    <div class="container">
+        <a class="navbar-brand" href="#">CAP Sahagún</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive"
+                aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="index.html">Inicio</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="tutores.html">Tutores</a>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link" href="pagos.html">Pagos
+                        <span class="sr-only">(current)</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="horarios.html">Horarios</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="materias.html">Materias</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="estudiantes.html">Estudiantes</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<!-- Page Content -->
+<div class="container">
+    <!-- Page Features -->
+    <div class="row">
+        <div class="mt-5 col-lg-12">
+            <div class="card">
+                <div class="card-body">
+                    <h3 class="align-text-top">Control de pagos</h3>
+                    <p class="lead">Registro de pagos de inscripciones</p>
+                    <form>
+                        <div class="form-row">
+                            <div class="form-group col-md-2">
+                                <label for="cod_pago">Codigo de pago</label>
+                                <input type="number" class="form-control" id="cod_pago" name="cod_pago" required>
+                            </div>
+                            <div class="form-group col-md-2">
+                                <label for="fec_pago">Fecha pago</label>
+                                <input type="text" class="form-control" id="fec_pago" name="fec_pago" required>
+                            </div>
+                            <div class="form-group col-md-2">
+                                <label for="hor_pago">Hora de pago</label>
+                                <input type="text" class="form-control" id="hor_pago" required>
+                            </div>
+                            <div class="form-group col-md-2">
+                                <label for="val_pagar">Valor a pagar</label>
+                                <input type="number" class="form-control" id="val_pagar" required>
+                            </div>
+                            <div class="form-group col-md-2">
+                                <label for="val_restante">Valor restante</label>
+                                <input type="number" class="form-control" id="val_restante" value="0" required>
+                            </div>
+                            <div class="form-group col-md-2">
+                                <label for="cod_registro">Codigo de registro</label>
+                                <select class="custom-select" id="cod_registro" required>
+                                    <option selected disabled value="">Seleccione...</option>
+                                </select>
+                            </div>
+                        </div>
+                        <button type="submit" id="btn_form_tutor" class="btn btn-info">
+                            <i class="fas fa-plus-circle"></i> Registrar pago
+                        </button>
+                    </form>
+                </div>
+            </div>
+            <div class="my-2"></div>
+            <div class="my-2"></div>
+            <!--<table class="table table-sm">
+                <thead>
+                <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">Nombre</th>
+                    <th scope="col">Apellido</th>
+                    <th scope="col">Correo</th>
+                    <th scope="col">Telefono</th>
+                    <th scope="col">Detalle</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <th scope="row">101204540</th>
+                    <td>Mark Conster</td>
+                    <td>Otto Sabber</td>
+                    <td>@sdfsdfsdfsdfsdf</td>
+                    <td>300000000</td>
+                    <td>
+                        <button class="text-white estado-editar btn btn-warning btn-sm">
+                            <i class="fas fa-pen"></i> Editar
+                        </button>
+                        <button class="text-white estado-eliminar btn btn-danger btn-sm">
+                            <i class="fas fa-trash"></i> Eliminar
+                        </button>
+                    </td>
+                </tr>
+                </tbody>
+            </table>-->
+        </div>
+        <div class="col-lg-6">
+            <div class="card">
+                <div class="card-body">
+                    <h3 class="align-text-top">Control de pagos</h3>
+                    <p class="lead">Registro de pagos de maestros</p>
+                    <form>
+                        <div class="form-row">
+                            <div class="form-group col-md-12">
+                                <label for="cod_tutor_pago">Tutor o maestro</label>
+                                <select class="custom-select" id="cod_tutor_pago" required>
+                                    <option selected disabled value="">Seleccione...</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group col-md-6">
+                                <label for="nom_tutor_pago">Nombre</label>
+                                <input type="text" class="form-control" id="nom_tutor_pago" readonly>
+                            </div>
+                            <div class="form-group col-md-6">
+                                <label for="ape_tutor_pago">Apellidos</label>
+                                <input type="text" class="form-control" id="ape_tutor_pago" readonly>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="corr_tutor_pago">Correo</label>
+                            <input type="text" class="form-control" id="corr_tutor_pago" readonly>
+                        </div>
+                        <div class="form-group">
+                            <label for="dir_tutor_pago">Direccion</label>
+                            <input type="text" class="form-control" id="dir_tutor_pago" readonly>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group col-md-6">
+                                <label for="val_tutor_pago">Valor a pagar</label>
+                                <input type="text" class="form-control" id="val_tutor_pago">
+                            </div>
+                            <div class="form-group col-md-6">
+                                <label for="cod_caja_pago">Codigo de caja</label>
+                                <input type="text" class="form-control" id="cod_caja_pago" readonly>
+                            </div>
+                        </div>
+                        <button type="submit" class="btn btn-primary">
+                            Pagar <i class="fas fa-dollar-sign"></i>
+                        </button>
+                    </form>
+                </div>
+            </div>
+            <div class="my-2"></div>
+            <div class="my-2"></div>
+        </div>
+        <div class="col-lg-6">
+            <div class="card">
+                <div class="card-body">
+                    <h3 class="align-text-top">Registro de pagos a maestros</h3>
+                    <p class="lead">Cuentas de registro</p>
+                    <table class="mt-4 table table-sm table-dark table-hover">
+                        <thead>
+                        <tr>
+                            <th scope="col">#</th>
+                            <th scope="col">Nombre</th>
+                            <th scope="col">Fecha</th>
+                            <th scope="col">Valor pagado</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+<!-- Footer -->
+<footer class="py-5 bg-dark">
+    <div class="container">
+        <p class="m-0 text-center text-white">Copyright &copy; CAP Shagún 2020</p>
+    </div>
+    <!-- /.container -->
+</footer>
+
+<!-- Bootstrap core JavaScript -->
+<script src="vendor/jquery/jquery.min.js"></script>
+<script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+</body>
+
+</html>
