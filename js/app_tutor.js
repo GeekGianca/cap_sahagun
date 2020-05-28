@@ -78,8 +78,4 @@ $(document).ready(function () {
         });
     });
 
-    $(document).on('click', '.tutor-delete', function () {
-        if (confirm('¿Estas seguro de eliminar el tutor?\nLa informacion del tutor se eliminara con todos los registros que existan')) {
-        }
-    });
 });
