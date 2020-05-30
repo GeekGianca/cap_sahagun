@@ -26,7 +26,7 @@ $(document).ready(function () {
 
     function selectEstudiantes(){
         $.ajax({
-            url: 'php/l_estudiantes.php',
+            url: 'php/l_estudiantes_inscripcion.php',
             type: 'GET',
             success: function (response) {
                 let data = JSON.parse(response);
@@ -127,4 +127,5 @@ $(document).ready(function () {
         });
         e.preventDefault();
     });
+
 });
